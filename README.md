@@ -7,4 +7,4 @@
 - [Udemy](https://www.udemy.com/course/robot-framework-with-python-selenium/?couponCode=ST15MT31224)
 
 ## Contributors
-- [Girish Devappa](https://github.com/settings/profile) (Student Contributor)
+- [Girish Devappa](https://github.com/giri81) (Student Contributor)
