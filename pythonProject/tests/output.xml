@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.3 on win32)" generated="2024-03-13T16:55:34.525508" rpa="false" schemaversion="5">
+<suite id="s1" name="testDemo1" source="C:\Users\eltsin\Documents\Learn\python-training\RobotFramework\pythonProject\tests\testDemo1.robot">
+<test id="s1-t1" name="Validate UnSuccessful Login" line="7">
+<kw name="open the browser with mortgage payment with url">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-03-13T16:55:34.690635" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-03-13T16:55:34.690635" elapsed="5.389826"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-03-13T16:55:40.080461" level="INFO">Opening url 'https://sso.teachable.com/secure/9521/identity/login/password'</msg>
+<arg>https://sso.teachable.com/secure/9521/identity/login/password</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-03-13T16:55:40.080461" elapsed="3.674716"/>
+</kw>
+<status status="PASS" start="2024-03-13T16:55:34.689571" elapsed="9.065606"/>
+</kw>
+<status status="PASS" start="2024-03-13T16:55:34.688483" elapsed="9.067705"/>
+</test>
+<doc>To validate the login form</doc>
+<status status="PASS" start="2024-03-13T16:55:34.526575" elapsed="9.231651"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="testDemo1">testDemo1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
