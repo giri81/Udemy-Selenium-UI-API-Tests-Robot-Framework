@@ -7,9 +7,6 @@ USERNAME = "test.user.girish@gmail.com"
 PASSWORD = "test"
 GMAIL_SIGN_URL = r"https://mail.google.com/"
 
-# Path to Chromedriver
-CHROMEDRIVER_PATH = r"C:\Users\eltsin\chromediver\chromedriver-win64\chromedriver"
-
 # Initialize Chrome WebDriver
 driver = webdriver.Chrome()
 
