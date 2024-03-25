@@ -8,6 +8,6 @@
 
 ## Contributors
 - [Girish Devappa](https://github.com/giri81) (Student Contributor)
-- [script demonstrates Selenium testing for various functionalities of "The Internet Heroku App"](https://the-internet.herokuapp.com/)
+- [The Internet Heroku App](https://the-internet.herokuapp.com/)(script demonstrates Selenium testing of its various functionalities)
 
 
