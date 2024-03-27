@@ -10,7 +10,8 @@ Test Page Functionality
     ...                `${BROWSER}`: Default browser value (chrome).
     ...                `${BROWSER_FIREFOX}`: Firefox browser.
     ...                `${BROWSER_EDGE}`: Edge browser.
-    Open Browser To Homepage    ${BROWSER}
-    # Add your test steps here
+    Open Browser To Homepage    ${BROWSER_EDGE}
+    Log    Maximizes the browser window
+    Maximize Browser Window
     Sleep    4s
     Close Browser Session
