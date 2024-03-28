@@ -1,7 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    TestPage.py
-Resource   resource.txt
 Variables  pages/variables.py
 
 *** Test Cases ***
@@ -10,8 +9,15 @@ Test Page Functionality
     ...                `${BROWSER}`: Default browser value (chrome).
     ...                `${BROWSER_FIREFOX}`: Firefox browser.
     ...                `${BROWSER_EDGE}`: Edge browser.
-    Open Browser To Homepage    ${BROWSER_EDGE}
-    Log    Maximizes the browser window
-    Maximize Browser Window
-    Sleep    4s
+    Open Homepage    ${BROWSER_EDGE}    ${HOMEPAGE_URL}
+    Sleep    2s
     Close Browser Session
+
+*** Keywords ***
+Open Homepage
+    [Arguments]    ${browser}   ${url}
+    Log    open url and maximize the window
+    open browser to homepage    ${browser}  ${url}
+
+Close Browser Session
+    Close All Browsers
