@@ -12,20 +12,20 @@
 
 Project Root
 │
-├── TestAPI.py            # Python script containing API tests
-├── test-reports          # Directory to store test reports
-│   └── [timestamp]       # Timestamped directory containing XML test reports
-│       └── report.xml    # XML test report file
-├── api_helpers.py        # Python module with helper functions for API tests
-├── pages                 # Directory containing page object modules
-│   ├── __init__.py       # Python package initializer
-│   ├── home_page.py      # Page object module for the home page
-│   └── WebDriverFactory.py  # Factory class for WebDriver instances
-├── resources             # Directory containing resource files for tests
-│   ├── resource.txt      # Resource file defining custom keywords
-│   └── variables.py      # Python module containing test variables
-├── test.log              # Log file containing test execution logs
-└── README.md             # README file describing the project and its structure
+├── TestAPI.py            
+├── test-reports          
+│   └── [timestamp]       
+│       └── report.xml   
+├── api_helpers.py        
+├── pages                
+│   ├── __init__.py       
+│   ├── home_page.py      
+│   └── WebDriverFactory.py  
+├── resources             
+│   ├── resource.txt      
+│   └── variables.py      
+├── test.log            
+└── README.md             
 
 
 
