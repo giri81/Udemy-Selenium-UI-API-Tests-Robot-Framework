@@ -2,6 +2,7 @@ from robot.api.deco import keyword
 from pages.home_page import HomePage
 from pages.WebDriverFactory import WebDriverFactory
 from time import sleep
+import pages.variables as variables  # Import variables.py module
 
 
 class TestPage:
@@ -37,7 +38,16 @@ class TestPage:
         """
         homepage = HomePage(self.driver, url)  # Pass 'url' to HomePage instance
         homepage.open()
-        sleep(3)
+        sleep(2)
+
+    @keyword
+    def open_add_remove_elements_page(self):
+        """
+        Opens the 'Add/Remove Elements' page in the browser.
+        """
+        add_remove_elements_url = variables.ADD_REMOVE_ELEMENTS_URL
+        self.driver.get(add_remove_elements_url)
+        sleep(2)
 
     @keyword
     def close_browser_session(self):
@@ -45,4 +55,8 @@ class TestPage:
         Closes the browser session.
         """
         if self.driver:
-            self.driver.quit()
+            try:
+                self.driver.quit()
+            except Exception as e:
+                print(f"An error occurred while closing the browser: {e}")
+

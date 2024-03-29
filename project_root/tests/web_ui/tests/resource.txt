@@ -1,7 +1,0 @@
-*** Keywords ***
-Open Browser To Homepage
-    [Arguments]    ${browser}
-    Open Browser    https://the-internet.herokuapp.com/    ${browser}
-
-Close Browser Session
-    Close All Browsers
