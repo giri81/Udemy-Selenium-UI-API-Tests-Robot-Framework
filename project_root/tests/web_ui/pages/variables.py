@@ -5,3 +5,4 @@ BROWSER_FIREFOX = 'firefox'
 BROWSER_EDGE = 'edge'
 HOMEPAGE_URL = "https://the-internet.herokuapp.com/"
 ADD_REMOVE_ELEMENTS_URL = "https://the-internet.herokuapp.com/add_remove_elements/"
+INVALID_ADD_REMOVE_ELEMENTS_URL = HOMEPAGE_URL
