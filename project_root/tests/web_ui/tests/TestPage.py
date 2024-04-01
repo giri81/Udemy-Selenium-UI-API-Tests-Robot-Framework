@@ -46,20 +46,20 @@ class TestPage:
         sleep(2)
 
     @keyword
-    def verify_page_contains_text(self, text):
+    def verify_page_contains_element(self, byid, text):
         """
         Verifies that the page contains the specified text.
         """
-        locator = (By.ID, "content")
+        locator = (By.ID, byid)
         try:
             WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(locator))
             element = self.driver.find_element(*locator)
-            assert text in element.text, f"Expected text '{text}' not found on the page"
+            assert text in element.text, f"Expected text '{text}' not found on the page. Actual text: '{element.text}'"
         except Exception as e:
             raise AssertionError(f"Failed to verify page contains text: {e}")
 
     @keyword
-    def click_button_with_xpath(self, xpath):
+    def click_with_xpath(self, xpath):
         """
         Clicks the button using the provided XPath.
         """
