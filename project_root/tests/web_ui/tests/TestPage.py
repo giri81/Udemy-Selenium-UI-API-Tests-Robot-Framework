@@ -5,6 +5,11 @@ from selenium.webdriver.support import expected_conditions as EC
 from pages.home_page import HomePage
 from pages.WebDriverFactory import WebDriverFactory
 from time import sleep
+from selenium.common.exceptions import TimeoutException, NoSuchElementException
+import requests
+
+from selenium.common.exceptions import NoSuchWindowException
+from selenium.webdriver.common.keys import Keys
 import pages.variables as variables  # Import variables.py module
 
 
@@ -20,7 +25,7 @@ class TestPage:
         self.driver = None
 
     @keyword
-    def open_browser_to_homepage(self, browser='chrome', url=None):
+    def open_the_homepage(self, browser='chrome', url=None):
         """
         Opens the browser and navigates to the home page.
         """
@@ -75,6 +80,31 @@ class TestPage:
                 raise AssertionError("Button is not visible or enabled")
         except Exception as e:
             raise AssertionError(f"Failed to click button with XPath '{xpath}': {e}")
+
+    @keyword
+    def check_for_broken_images(self):
+        """
+        Checks for broken images on the page.
+        """
+        try:
+            images = self.driver.find_elements(By.TAG_NAME, 'img')
+            broken_images = []
+            for image in images:
+                src = image.get_attribute('src')
+                response = requests.head(src)
+                if response.status_code != 200:
+                    broken_images.append(src)
+
+            if broken_images:
+                print(f"Broken images found: {', '.join(broken_images)}")
+            else:
+                raise AssertionError("No broken images found on the page.")
+
+        except NoSuchElementException:
+            raise AssertionError("No images found on the page.")
+
+        except TimeoutException:
+            raise TimeoutException("Page did not load in time.")
 
     @keyword
     def close_browser_session(self):

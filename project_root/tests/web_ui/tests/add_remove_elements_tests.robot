@@ -26,7 +26,7 @@ Add Remove Elements Test Page Functionality (Chrome Browser)
 Open Homepage
     [Arguments]    ${browser}   ${url}
     Log    Open URL and maximize the window
-    Open Browser To Homepage    ${browser}  ${url}
+    Open The Homepage    ${browser}  ${url}
 
 Close Browser Session
     Close All Browsers
