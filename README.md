@@ -8,7 +8,7 @@
 
 ## Contributors
 - [Girish Devappa](https://github.com/giri81) (Student Contributor)
-- [The Internet Heroku App](https://the-internet.herokuapp.com/) (System Under Test: Selenium testing of its various functionalities)
+- [The Internet Heroku App](https://the-internet.herokuapp.com/) (System Under Test)
 - [YouTube Tutorial: How to handle Checkbox in Selenium | Selenium Webdriver with Java tutorials](https://youtu.be/7BtHDhaN65o?si=HxI3ChnrJBNnXc1X)
 
 ### Project Directory Structure
