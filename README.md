@@ -8,7 +8,8 @@
 
 ## Contributors
 - [Girish Devappa](https://github.com/giri81) (Student Contributor)
-- [The Internet Heroku App](https://the-internet.herokuapp.com/)(Selenium testing of its various functionalities)
+- [The Internet Heroku App](https://the-internet.herokuapp.com/) (Selenium testing of its various functionalities)
+- [YouTube Tutorial: How to handle Checkbox in Selenium | Selenium Webdriver with Java tutorials](https://youtu.be/7BtHDhaN65o?si=HxI3ChnrJBNnXc1X)
 
 ### Project Directory Structure
 TestAPI.py contains the Python script with API tests. test.log is the log file containing test execution logs.  
@@ -18,7 +19,3 @@ api_helpers.py is a Python module containing helper functions for API tests.
 UI tests
 pages is a directory containing page object modules for UI tests.
 resources is a directory containing resource files used in tests, such as custom keywords and variables.
-      
-
-
-
