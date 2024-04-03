@@ -107,6 +107,31 @@ class TestPage:
             raise TimeoutException("Page did not load in time.")
 
     @keyword
+    def check_checkbox_with_xpath(self, checkbox_xpath):
+        """
+        Checks the checkbox with the specified XPath.
+        """
+        try:
+            checkbox = self.driver.find_element(By.XPATH, checkbox_xpath)
+            if not checkbox.is_selected():
+                checkbox.click()
+        except Exception as e:
+            raise AssertionError(f"Failed to check checkbox with XPath '{checkbox_xpath}': {e}")
+
+
+    @keyword
+    def uncheck_checkbox_with_xpath(self, checkbox_xpath):
+        """
+        Unchecks the checkbox with the specified XPath.
+        """
+        try:
+            checkbox = self.driver.find_element(By.XPATH, checkbox_xpath)
+            if checkbox.is_selected():
+                checkbox.click()
+        except Exception as e:
+            raise AssertionError(f"Failed to uncheck checkbox with XPath '{checkbox_xpath}': {e}")
+
+    @keyword
     def close_browser_session(self):
         """
         Closes the browser session.
