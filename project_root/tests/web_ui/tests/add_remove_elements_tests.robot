@@ -2,6 +2,7 @@
 Library    SeleniumLibrary
 Library    TestPage.py
 Variables  ../pages/variables.py
+Resource    resource.txt
 # Suite Setup
 # Suite Teardown
 
@@ -22,12 +23,5 @@ Add Remove Elements Test Page Functionality (Chrome Browser)
     Sleep    2s
     Close Browser Session
 
-*** Keywords ***
-Open Homepage
-    [Arguments]    ${browser}   ${url}
-    Log    Open URL and maximize the window
-    Open The Homepage    ${browser}  ${url}
 
-Close Browser Session
-    Close All Browsers
 

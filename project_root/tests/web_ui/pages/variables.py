@@ -4,7 +4,5 @@ BROWSER = 'chrome'  # Default browser value
 BROWSER_FIREFOX = 'firefox'
 BROWSER_EDGE = 'edge'
 HOMEPAGE_URL = "https://the-internet.herokuapp.com/"
-user = "admin"
-password = "admin"
 
 INVALID_ADD_REMOVE_ELEMENTS_URL = HOMEPAGE_URL

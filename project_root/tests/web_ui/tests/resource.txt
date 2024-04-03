@@ -1,0 +1,8 @@
+*** Keywords ***
+open_homepage
+    [Arguments]    ${browser}    ${url}
+    Log    Open URL and maximize the window
+    Open The Homepage    ${browser}    ${url}
+
+close_browser_session
+    Close All Browsers
