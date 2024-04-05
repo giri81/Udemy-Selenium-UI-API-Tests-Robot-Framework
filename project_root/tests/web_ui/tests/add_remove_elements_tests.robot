@@ -9,7 +9,8 @@ Resource    resource.txt
 *** Test Cases ***
 Add Remove Elements Test Page Functionality (Chrome Browser)
     [Documentation]    Test the functionality of the-internet.herokuapp.com's Add/Remove Elements page using Chrome browser
-    Log    open home url 
+    [Tags]    SMOKE
+    Log    open home url
     Open Homepage    ${BROWSER}    ${HOMEPAGE_URL}
     Log    click web element "Add/Remove Elements"
     Click With Xpath    //*[@id="content"]/ul/li[2]/a
