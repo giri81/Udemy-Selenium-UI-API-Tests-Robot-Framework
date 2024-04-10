@@ -11,5 +11,5 @@
 - [The Internet Heroku App](https://the-internet.herokuapp.com/) (System Under Test)
 - [YouTube Tutorial: How to handle Checkbox in Selenium | Selenium Webdriver with Java tutorials](https://youtu.be/7BtHDhaN65o?si=HxI3ChnrJBNnXc1X)(Knowledge Reference)
 
-## API Testing
+### API Testing
 - [The GitHub API](https://api.github.com/repos/giri81/Udemy-Selenium-UI-API-Tests-Robot-Framework)(offers a wide range of endpoints)
