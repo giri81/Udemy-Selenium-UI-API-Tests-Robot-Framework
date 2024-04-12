@@ -132,6 +132,23 @@ class TestPage:
             raise AssertionError(f"Failed to uncheck checkbox with XPath '{checkbox_xpath}': {e}")
 
     @keyword
+    def verify_file_exists(self, folder_path, filename):
+        """
+        Verifies if the file exists in the given folder path.
+
+        Arguments:
+        - folder_path: The absolute path of the folder where the file is expected to exist.
+        - filename: The name of the file to be checked.
+        """
+        import os
+
+        file_path = os.path.join(folder_path, filename)
+        if os.path.exists(file_path):
+            print(f"File '{filename}' exists in the folder '{folder_path}'.")
+        else:
+            raise AssertionError(f"File '{filename}' does not exist in the folder '{folder_path}'.")
+
+    @keyword
     def close_browser_session(self):
         """
         Closes the browser session.

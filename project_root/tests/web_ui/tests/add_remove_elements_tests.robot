@@ -7,9 +7,9 @@ Resource    resource.txt
 # Suite Teardown
 
 *** Test Cases ***
-Add Remove Elements Test Page Functionality (Chrome Browser)
-    [Documentation]    Test the functionality of the-internet.herokuapp.com's Add/Remove Elements page using Chrome browser
-    [Tags]    SMOKE
+Add Remove Elements
+    [Documentation]    Test Add/Remove Elements
+    [Tags]    Smoke
     Log    open home url
     Open Homepage    ${BROWSER}    ${HOMEPAGE_URL}
     Log    click web element "Add/Remove Elements"

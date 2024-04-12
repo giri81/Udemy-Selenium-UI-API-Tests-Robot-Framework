@@ -10,7 +10,7 @@ Variables  ../pages/variables.py
 *** Test Cases ***
 Check for Broken Images
     [Documentation]    Verify that there are broken images
-    [Tags]    SMOKE
+    [Tags]    Smoke
     Log    open home url
     Open Homepage    ${BROWSER}    ${HOMEPAGE_URL}
     Log    xpath to test 'broken image' //*[@id="content"]/ul/li[4]/a

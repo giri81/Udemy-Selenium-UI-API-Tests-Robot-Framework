@@ -7,7 +7,7 @@ Resource   resource.txt
 *** Test Cases ***
 Check First Checkbox
     [Documentation]    Test to check the first checkbox
-    [Tags]    SMOKE
+    [Tags]    Smoke
     Open Homepage    ${BROWSER}    ${HOMEPAGE_URL}
     Log    Click web element "Checkboxes"
     Click With Xpath    //*[@id="content"]/ul/li[6]/a

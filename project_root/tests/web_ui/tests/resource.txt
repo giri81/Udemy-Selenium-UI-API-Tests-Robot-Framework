@@ -1,5 +1,5 @@
 *** Keywords ***
-open_homepage
+Open Homepage
     [Arguments]    ${browser}    ${url}
     Log    Open URL and maximize the window
     Open The Homepage    ${browser}    ${url}
