@@ -16,3 +16,8 @@ class GitHubAPIUtils:
         :rtype: str
         """
         return f'https://api.github.com/repos/{owner}/{repo_name}'
+
+    @staticmethod
+    def fetch_rate_limit_endpoint():
+
+        return f"https://api.github.com/rate_limit"
