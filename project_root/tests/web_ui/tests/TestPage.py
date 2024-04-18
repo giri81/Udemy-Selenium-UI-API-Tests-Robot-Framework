@@ -149,6 +149,34 @@ class TestPage:
             raise AssertionError(f"File '{filename}' does not exist in the folder '{folder_path}'.")
 
     @keyword
+    def perform_form_authentication(self, username, password, login_button_xpath):
+        """
+        Performs Form Authentication by entering the provided username and password,
+        and clicking the login button.
+
+        Arguments:
+        - username: The username to be entered in the form.
+        - password: The password to be entered in the form.
+        - login_button_xpath: The XPath of the login button.
+        """
+        try:
+            # Enter username
+            username_field = self.driver.find_element(By.ID, 'username')
+            username_field.clear()
+            username_field.send_keys(username)
+
+            # Enter password
+            password_field = self.driver.find_element(By.ID, 'password')
+            password_field.clear()
+            password_field.send_keys(password)
+
+            # Click login button
+            login_button = self.driver.find_element(By.XPATH, login_button_xpath)
+            login_button.click()
+        except Exception as e:
+            raise AssertionError(f"Failed to perform form authentication: {e}")
+
+    @keyword
     def close_browser_session(self):
         """
         Closes the browser session.

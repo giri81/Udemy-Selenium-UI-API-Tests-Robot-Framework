@@ -9,3 +9,6 @@ INVALID_ADD_REMOVE_ELEMENTS_URL = HOMEPAGE_URL
 
 folder_path = r"NULL"
 filename = r"NULL"
+
+FORM_USERNAME = 'tomsmith'
+FORM_PASSWORD = 'SuperSecretPassword!'
