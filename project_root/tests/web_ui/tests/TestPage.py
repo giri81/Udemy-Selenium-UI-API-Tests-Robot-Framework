@@ -7,6 +7,7 @@ from pages.WebDriverFactory import WebDriverFactory
 from time import sleep
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
 import requests
+from selenium.common.exceptions import TimeoutException, NoSuchElementException, NoAlertPresentException
 
 from selenium.common.exceptions import NoSuchWindowException
 from selenium.webdriver.common.keys import Keys
@@ -175,6 +176,17 @@ class TestPage:
             login_button.click()
         except Exception as e:
             raise AssertionError(f"Failed to perform form authentication: {e}")
+
+    @keyword
+    def click_allow_on_popup(self):
+        """
+        Clicks the 'Allow' button on a popup window.
+        """
+        try:
+            alert = self.driver.switch_to.alert
+            alert.accept()
+        except NoAlertPresentException:
+            print("No popup alert found or unable to switch to alert.")
 
     @keyword
     def close_browser_session(self):
