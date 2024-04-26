@@ -8,7 +8,7 @@ Resource   resource.txt
 Form Authentication
     [Documentation]    Test for Geolocation using Edge browser
     [Tags]    Integration
-    Open Homepage    ${BROWSER_EDGE}    ${HOMEPAGE_URL}
+    Open Homepage    ${BROWSER}    ${HOMEPAGE_URL}
     Log    Click web element "Geolocation"
     Click With Xpath    //*[@id="content"]/ul/li[23]/a
     Sleep    2s
