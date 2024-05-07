@@ -16,9 +16,10 @@
 
 ## Usage Information for Web_UI in Windows Environment 
 To run the tests in a Windows environment, follow these steps:
-
 1. Navigate to the repository directory: Open a command prompt, navigate to the directory where you cloned the repository.
-
 2. Run the Robot Framework tests by executing the following command: "robot --variable BROWSER:chrome your_test_file.robot". This command will run the tests using Chrome as the browser.
 
-## Usage Information for Local Rest EndPoint Testing
+## Usage Information for Local REST EndPoint Testing
+1. Run the API test script test_api.py. The http server will automatically start before running the tests and stop after they have completed, ensuring that the tests can be executed against a running server.
+2. The script will then test the local API endpoint and log the results to a new log file in the `logs` directory.
+
