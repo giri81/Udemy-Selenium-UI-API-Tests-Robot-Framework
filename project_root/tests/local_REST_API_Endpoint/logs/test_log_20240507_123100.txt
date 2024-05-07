@@ -1,0 +1,3 @@
+2024-05-07 12:31:00,477 - INFO - Response status code is 200 - Expected: 200
+2024-05-07 12:31:00,477 - INFO - Response content type is application/json - Expected: application/json
+2024-05-07 12:31:00,477 - INFO - Response body contains the expected message - Expected: {'message': 'Hello, this is your REST API response!'}
