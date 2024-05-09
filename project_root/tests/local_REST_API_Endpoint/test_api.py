@@ -30,31 +30,69 @@ class TestAPI(unittest.TestCase):
         # Define the base URL for the local API endpoint
         self.base_url = 'http://localhost:8000'
 
-    def test_get_request(self):
+    def test_get_request_1(self):
         # Send a GET request to the API endpoint
         response = requests.get(self.base_url)
 
-        # Assert that the response status code is 200 (OK)
-        self.assertEqual(response.status_code, 200)
-        self.log_assert("Response status code", 200, response.status_code)
+        try:
+            # Assert that the response status code is 200 (OK)
+            self.assertEqual(response.status_code, 200, f"Expected status code 200 but got {response.status_code}")
 
-        # Assert that the response content type is JSON
-        self.assertEqual(response.headers['Content-Type'], 'application/json')
-        self.log_assert("Response content type", 'application/json', response.headers['Content-Type'])
+            # Assert that the response content type is JSON
+            self.assertEqual(response.headers.get('Content-Type'), 'application/json',
+                             f"Expected content type 'application/json' but got {response.headers.get('Content-Type')}")
 
-        # Assert that the response body contains the expected message
-        expected_message = {'message': 'Hello, this is your REST API response!'}
-        self.assertEqual(response.json(), expected_message)
-        self.log_assert("Response body", expected_message, response.json())
+            # Assert that the response body contains the expected message
+            expected_message = {'message': 'Hello, this is your REST API response!'}
+            self.assertEqual(response.json(), expected_message,
+                             f"Expected response body {expected_message} but got {response.json()}")
 
-    def log_assert(self, message, expected, actual):
+            # Log test pass status
+            self.log_test_status("test_get_request_1", "PASS")
+        except AssertionError as e:
+            # Log the failure details
+            self.log_test_failure("test_get_request_1", str(e))
+
+    def test_get_request_2(self):
+        # Send a GET request to the API endpoint
+        response = requests.get(self.base_url)
+
+        try:
+            # Assert that the response status code is 200 (OK)
+            self.assertEqual(response.status_code, 200, f"Expected status code 200 but got {response.status_code}")
+
+            # Assert that the response content type is JSON
+            self.assertEqual(response.headers.get('Content-Type'), 'application/json',
+                             f"Expected content type 'application/json' but got {response.headers.get('Content-Type')}")
+
+            # Assert that the response body contains the expected message
+            expected_message = {'message': 'Welcome to the API!'}
+            self.assertEqual(response.json(), expected_message,
+                             f"Expected response body {expected_message} but got {response.json()}")
+
+            # Log test pass status
+            self.log_test_status("test_get_request_2", "PASS")
+        except AssertionError as e:
+            # Log the failure details
+            self.log_test_failure("test_get_request_2", str(e))
+
+    def log_test_status(self, test_name, status):
         # Generate a log file name with timestamp
         log_file = os.path.join('logs', f'test_log_{datetime.now().strftime("%Y%m%d_%H%M%S")}.txt')
         # Configure logging to write to the new log file
         logging.basicConfig(filename=log_file, filemode='a', level=logging.INFO,
                             format='%(asctime)s - %(levelname)s - %(message)s')
-        # Log the assert message along with expected and actual values
-        logging.info(f"{message}: Expected - {expected}, Actual - {actual}")
+        # Log the test status
+        logging.info(f"{test_name} - {status}")
+
+    def log_test_failure(self, test_name, failure_details):
+        # Generate a log file name with timestamp
+        log_file = os.path.join('logs', f'test_log_{datetime.now().strftime("%Y%m%d_%H%M%S")}.txt')
+        # Configure logging to write to the new log file
+        logging.basicConfig(filename=log_file, filemode='a', level=logging.INFO,
+                            format='%(asctime)s - %(levelname)s - %(message)s')
+        # Log the test failure details along with expected and actual values
+        logging.info(f"{test_name} - FAILED: {failure_details}")
 
 
 if __name__ == '__main__':

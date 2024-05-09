@@ -1,0 +1,4 @@
+2024-05-09 16:43:12,997 - INFO - test_get_request_1 - FAILED: {'message': 'Welcome to the API!'} != {'message': 'Hello, this is your REST API response!'}
+- {'message': 'Welcome to the API!'}
++ {'message': 'Hello, this is your REST API response!'} : Expected response body {'message': 'Hello, this is your REST API response!'} but got {'message': 'Welcome to the API!'}
+2024-05-09 16:43:15,031 - INFO - test_get_request_2 - PASS
