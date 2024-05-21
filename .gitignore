@@ -162,4 +162,4 @@ cython_debug/
 # added to ignore python virtual env
 Scripts/
 pyvenv.cfg
-
+project_root/tests/auth_test/Include
