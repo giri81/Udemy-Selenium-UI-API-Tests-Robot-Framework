@@ -31,10 +31,3 @@ class HomePage(BasePage):
         Maximizes the browser window using WebDriver's built-in method.
         """
         self.driver.maximize_window()
-
-    def open_add_remove_elements_page(self):
-        """
-        Opens the 'Add/Remove Elements' page in the browser.
-        """
-        add_remove_elements_url = "https://the-internet.herokuapp.com/add_remove_elements/"
-        self.driver.get(add_remove_elements_url)
