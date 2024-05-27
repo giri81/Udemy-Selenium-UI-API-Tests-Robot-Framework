@@ -160,14 +160,17 @@ cython_debug/
 #.idea/
 
 # python virtual env
-Scripts/
-pyvenv.cfg
-project_root/tests/auth_test/Include
+project_root/Scripts/
+project_root/pyvenv.cfg
+project_root/Include
 
 # robot framework error screenshots, log files
 project_root/tests/web_ui_django/21-Social_Clone_Project/*.png
 project_root/tests/web_ui_django/21-Social_Clone_Project/log.html
 project_root/tests/web_ui_django/21-Social_Clone_Project/output.xml
 project_root/tests/web_ui_django/21-Social_Clone_Project/report.html
+project_root/tests/web_ui/tests/log.html
+project_root/tests/web_ui/tests/output.xml
+project_root/tests/web_ui/tests/report.html
 
 
