@@ -24,6 +24,9 @@ I am pushing into GitHub in gradual progression of practice projects as part of 
 ### API Testing
 - [The GitHub API](https://docs.github.com/en/rest?apiVersion=2022-11-28) (offers a wide range of endpoints)
 
+**Install Dependencies**
+https://github.com/giri81/Udemy-Selenium-UI-API-Tests-Robot-Framework/blob/main/requirements.txt
+
 ## Usage Information for Web_UI in Windows Environment 
 To run the tests in a Windows environment, follow these steps:
 1. Navigate to the repository directory: Open a command prompt, navigate to the directory where you cloned the repository.
