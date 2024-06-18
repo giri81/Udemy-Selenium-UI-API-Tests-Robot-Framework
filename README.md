@@ -16,6 +16,8 @@ I would like to extend my gratitude to both Rahul Shetty and Jose Portilla, as w
 
 ## Contributors
 - [Girish Devappa](https://www.linkedin.com/in/girish-devappa-5539b4190/) (Student Contributor)
+  
+## References
 - [The Internet Heroku App](https://the-internet.herokuapp.com/) (System Under Test)
 - [YouTube Tutorial: How to handle Checkbox in Selenium | Selenium Webdriver with Java tutorials](https://youtu.be/7BtHDhaN65o?si=HxI3ChnrJBNnXc1X) (Knowledge Reference)
 
