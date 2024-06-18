@@ -20,8 +20,7 @@ I would like to extend my gratitude to both Rahul Shetty and Jose Portilla, as w
 - [The Internet Heroku App](https://the-internet.herokuapp.com/) (System Under Test)
 - [YouTube Tutorial: How to handle Checkbox in Selenium | Selenium Webdriver with Java tutorials](https://youtu.be/7BtHDhaN65o?si=HxI3ChnrJBNnXc1X) (Knowledge Reference)
 - [Understanding the Python Mock Object Library](https://realpython.com/python-mock-library/) (Knowledge Reference)
-## API Testing
-- [The GitHub API](https://docs.github.com/en/rest?apiVersion=2022-11-28) (offers a wide range of endpoints)
+- [API Testing,GitHub API](https://docs.github.com/en/rest?apiVersion=2022-11-28) (knowledge Reference)
 ### Install Dependencies
 - [Requirements.txt](https://github.com/giri81/Udemy-Selenium-UI-API-Tests-Robot-Framework/blob/main/requirements.txt)
 ### Usage Information for Web_UI in Windows Environment 
