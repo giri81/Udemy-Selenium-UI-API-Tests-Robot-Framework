@@ -3,8 +3,8 @@ from time import sleep
 from selenium.webdriver.common.by import By
 
 # Credentials and URLs
-USERNAME = "test.user.girish@gmail.com"
-PASSWORD = "test"
+USERNAME = "mock.user.girish@gmail.com"
+PASSWORD = "mock"
 GMAIL_SIGN_URL = r"https://mail.google.com/"
 
 # Initialize Chrome WebDriver

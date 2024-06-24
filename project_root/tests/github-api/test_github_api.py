@@ -1,6 +1,6 @@
-import unittest  # Importing the unittest module for creating test cases
+import unittest  # Importing the unittest module for creating mock cases
 import requests  # Importing the requests module for making HTTP requests
-import logging  # Importing the logging module for logging test results
+import logging  # Importing the logging module for logging mock results
 import os  # Importing the os module for file operations
 from datetime import datetime  # Importing datetime module to generate timestamp
 from utils.github_api_utils import GitHubAPIUtils  # Importing the GitHubAPIUtils class for constructing GitHub API URLs
@@ -19,13 +19,13 @@ logging.basicConfig(filename=log_file, filemode='w', level=logging.INFO,
 
 class TestGitHubAPI(unittest.TestCase):
     """
-    A test case class for testing GitHub API functionality.
+    A mock case class for testing GitHub API functionality.
     """
 
     @classmethod
     def setUpClass(cls):
         """
-        Set up the test class by defining common test data and resources.
+        Set up the mock class by defining common mock data and resources.
         """
         cls.owner = 'giri81'
         cls.repo_name = 'Udemy-Selenium-UI-API-Tests-Robot-Framework'
@@ -38,7 +38,7 @@ class TestGitHubAPI(unittest.TestCase):
         """
         response = requests.get(self.url)
         self.assertEqual(response.status_code, 200)
-        logging.info(f"Response code test passed for URL: {self.url}")
+        logging.info(f"Response code mock passed for URL: {self.url}")
 
     def test_user_information(self):
         """
@@ -48,7 +48,7 @@ class TestGitHubAPI(unittest.TestCase):
         repo_info = response.json()
         self.assertEqual(repo_info['owner']['login'], self.owner)
         self.assertEqual(repo_info['name'], self.repo_name)
-        logging.info(f"User information test passed for URL: {self.url}")
+        logging.info(f"User information mock passed for URL: {self.url}")
 
 
 if __name__ == '__main__':

@@ -16,7 +16,7 @@ import pages.variables as variables  # Import variables.py module
 
 class TestPage:
     """
-    Class containing test cases for the website.
+    Class containing mock cases for the website.
     """
 
     def __init__(self):

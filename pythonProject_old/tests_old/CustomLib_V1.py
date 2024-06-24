@@ -4,8 +4,8 @@ from selenium import webdriver
 class CustomLib_V1(object):
 
     def __init__(self):
-        self.USERNAME = "test.user.girish@gmail.com"
-        self.PASSWORD = "test"
+        self.USERNAME = "mock.user.girish@gmail.com"
+        self.PASSWORD = "mock"
         self.GMAIL_SIGN_URL = r"https://mail.google.com/"
 
         # Initialize Chrome WebDriver

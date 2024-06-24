@@ -17,14 +17,14 @@ logging.basicConfig(level=logging.INFO,
 
 class TestAPI(unittest.TestCase):
     def setUp(self):
-        logging.info("Starting test case...")
+        logging.info("Starting mock case...")
 
     def tearDown(self):
-        logging.info("Finishing test case...")
+        logging.info("Finishing mock case...")
 
     def test_authentication_success(self):
         logging.info("Executing test_authentication_success...")
-        # Positive test: Correct credentials
+        # Positive mock: Correct credentials
         response = requests.get("https://the-internet.herokuapp.com/digest_auth",
                                 auth=authenticate_api("admin", "admin"))
         self.assertEqual(response.status_code, 200)
@@ -36,7 +36,7 @@ class TestAPI(unittest.TestCase):
 
     def test_authentication_failure(self):
         logging.info("Executing test_authentication_failure...")
-        # Negative test: Incorrect credentials
+        # Negative mock: Incorrect credentials
         response = requests.get("https://the-internet.herokuapp.com/digest_auth",
                                 auth=authenticate_api("invalid_username", "invalid_password"))
         # Verify that the response status code indicates authentication failure
@@ -49,5 +49,5 @@ class TestAPI(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    # Use XMLTestRunner to generate XML test report
-    unittest.main(testRunner=xmlrunner.XMLTestRunner(output='test-reports'), exit=False)
+    # Use XMLTestRunner to generate XML mock report
+    unittest.main(testRunner=xmlrunner.XMLTestRunner(output='mock-reports'), exit=False)

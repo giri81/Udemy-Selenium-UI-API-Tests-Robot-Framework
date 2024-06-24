@@ -47,7 +47,7 @@ class TestAPI(unittest.TestCase):
             self.assertEqual(response.json(), expected_message,
                              f"Expected response body {expected_message} but got {response.json()}")
 
-            # Log test pass status
+            # Log mock pass status
             self.log_test_status("test_get_request_1", "PASS")
         except AssertionError as e:
             # Log the failure details
@@ -70,7 +70,7 @@ class TestAPI(unittest.TestCase):
             self.assertEqual(response.json(), expected_message,
                              f"Expected response body {expected_message} but got {response.json()}")
 
-            # Log test pass status
+            # Log mock pass status
             self.log_test_status("test_get_request_2", "PASS")
         except AssertionError as e:
             # Log the failure details
@@ -82,7 +82,7 @@ class TestAPI(unittest.TestCase):
         # Configure logging to write to the new log file
         logging.basicConfig(filename=log_file, filemode='a', level=logging.INFO,
                             format='%(asctime)s - %(levelname)s - %(message)s')
-        # Log the test status
+        # Log the mock status
         logging.info(f"{test_name} - {status}")
 
     def log_test_failure(self, test_name, failure_details):
@@ -91,7 +91,7 @@ class TestAPI(unittest.TestCase):
         # Configure logging to write to the new log file
         logging.basicConfig(filename=log_file, filemode='a', level=logging.INFO,
                             format='%(asctime)s - %(levelname)s - %(message)s')
-        # Log the test failure details along with expected and actual values
+        # Log the mock failure details along with expected and actual values
         logging.info(f"{test_name} - FAILED: {failure_details}")
 
 

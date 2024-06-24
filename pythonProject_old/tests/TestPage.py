@@ -6,7 +6,7 @@ from time import sleep
 
 class TestPage:
     """
-    Class containing test cases for the website.
+    Class containing mock cases for the website.
     """
 
     def __init__(self):

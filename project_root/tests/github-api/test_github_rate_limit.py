@@ -1,6 +1,6 @@
 import unittest
 import requests
-import logging  # Importing the logging module for logging test results
+import logging  # Importing the logging module for logging mock results
 import os  # Importing the os module for file operations
 from datetime import datetime  # Importing datetime module to generate timestamp
 from utils.github_api_utils import GitHubAPIUtils  # Importing the GitHubAPIUtils class for constructing GitHub API URLs
@@ -22,7 +22,7 @@ class GitHubRateLimitTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         """
-        Set up the test class by defining common test data and resources.
+        Set up the mock class by defining common mock data and resources.
         """
         cls.rate_limit_endpoint = GitHubAPIUtils.fetch_rate_limit_endpoint()
         logging.info(f"rate limit end point: {cls.rate_limit_endpoint}")
